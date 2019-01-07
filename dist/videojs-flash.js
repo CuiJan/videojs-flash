@@ -392,11 +392,11 @@ var Flash = function (_Tech) {
       errorEventProxyFunction: 'videojs.Flash.onError',
 
       // Player Settings
-      autoplay: false,
+      autoplay: options.autoplay,
       preload: options.preload,
       loop: options.loop,
       muted: options.muted,
-      bgcolor: '#f00'
+      scale: 'exactfit'
     }, options.flashVars);
 
     // Merge default parames with ones passed in
@@ -404,7 +404,8 @@ var Flash = function (_Tech) {
       // Opaque is needed to overlay controls, but can affect playback performance
       wmode: 'opaque',
       // Using bgcolor prevents a white flash when the object is loading
-      bgcolor: '#000000'
+      bgcolor: '#f00',
+      scale: 'exactfit'
     }, options.params);
 
     // Merge default attributes with ones passed in
