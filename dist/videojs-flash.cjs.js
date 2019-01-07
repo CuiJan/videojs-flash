@@ -372,7 +372,7 @@ var Flash = function (_Tech) {
       preload: options.preload,
       loop: options.loop,
       muted: options.muted,
-      scale: options.scale
+      scale: 'exactfit'
     }, options.flashVars);
 
     // Merge default parames with ones passed in
