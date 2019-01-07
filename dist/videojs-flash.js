@@ -396,7 +396,7 @@ var Flash = function (_Tech) {
       preload: options.preload,
       loop: options.loop,
       muted: options.muted,
-      scale: 'exactfit'
+      scale: options.scale
     }, options.flashVars);
 
     // Merge default parames with ones passed in
@@ -404,7 +404,8 @@ var Flash = function (_Tech) {
       // Opaque is needed to overlay controls, but can affect playback performance
       wmode: 'opaque',
       // Using bgcolor prevents a white flash when the object is loading
-      bgcolor: '#000000'
+      bgcolor: '#000000',
+      scale: 'exactfit'
     }, options.params);
 
     // Merge default attributes with ones passed in
